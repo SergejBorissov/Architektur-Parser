@@ -1,0 +1,17 @@
+package architekturProjekt;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        FileAuflistung fileAuflisterung = new FileAuflistung();
+        Regex regex = new Regex();
+        CSVReader csvReader = new CSVReader();
+
+        regex.gebeRegex();
+        regex.gebeRegexAus();
+        csvReader.gebeCSVDaten();
+        //fileAuflisterung.gebeAlleFilesAus();
+
+    }
+}
