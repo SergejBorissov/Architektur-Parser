@@ -1,0 +1,8 @@
+package architekturProjekt;
+
+public class FileChooser {
+
+    String datenQuelle1;
+    String datenQuelle2;
+    String datenQuelle3;
+}
