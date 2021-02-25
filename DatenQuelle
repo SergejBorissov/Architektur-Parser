@@ -1,0 +1,27 @@
+package architekturProjekt;
+
+import java.io.File;
+
+public class DatenQuelle {
+
+    String csvDateiKomma = "Name,Vorname,Adresse,Plz,Sadt,Land";
+    String csvText = "Name;Nachname;Alter;Adresse;Ort;";
+    String xmlText = "<Name>Sergej</name><Nachname>Borissov</Nachname>";
+    String jsonText = "[{Name: Walter, Nachname: Michel}]";
+    String zuSplitterndeZeichen = "ich;bin;ein;philosoph";
+    String xmltext2 = "<Nummer>1331</Nummer>" +
+            "<Name>Anselm</Name>" +
+            "<Nachname>Kiefer</Nachname>" +
+            "<Funktion>Maler</Funktion>" +
+            "<Anfang>01.Januar</Anfang>" +
+            "<Geburtstag>12.Dezember</Geburtstag>";
+
+
+
+    File schreibtischfile = new File("/home/sborissov/Schreibtisch/");
+    File charFile = new File("/home/sborissov/Schreibtisch/projekt.txt");
+
+
+
+    String[] splitterung = csvText.split(";");
+}
