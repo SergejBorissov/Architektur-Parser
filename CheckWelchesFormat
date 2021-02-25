@@ -1,0 +1,32 @@
+package architekturProjekt;
+
+public class CheckWelchesFormat {
+
+    DatenQuelle datenQuelle = new DatenQuelle();
+
+    public void checkJson(){
+
+        if(datenQuelle.jsonText.contains("{") == true){
+            System.out.println("Das ist ein Json Format wahrscheinlich");
+        } else {
+            System.out.println("Kein Json Format");
+        }
+
+    }
+
+    public void checkCsv(){
+        //Hier den Algo für die Berechnung rein
+
+    }
+
+    public void checkXML(){
+
+        if(datenQuelle.xmlText.contains("</") == true){
+            System.out.println("Wahrscheinlich eine XML Datei");
+        } else{
+            System.out.println("Keine XML Datei");
+        }
+
+    }
+
+}
