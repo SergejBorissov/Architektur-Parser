@@ -1,0 +1,14 @@
+package architekturProjekt;
+
+public class DarstellungDaten {
+
+    String datenSatz;
+
+    public String getDatenSatz() {
+        return datenSatz;
+    }
+
+    public void setDatenSatz(String datenSatz) {
+        this.datenSatz = datenSatz;
+    }
+}
