@@ -1,0 +1,14 @@
+package architekturProjekt;
+
+public class CSVDataPool {
+
+    String empfangeDaten;
+
+    public String getEmpfangeDaten() {
+        return empfangeDaten;
+    }
+
+    public void setEmpfangeDaten(String empfangeDaten) {
+        this.empfangeDaten = empfangeDaten;
+    }
+}
