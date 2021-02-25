@@ -1,0 +1,32 @@
+package architekturProjekt;
+
+public class DataConverter {
+
+    String csvConvert;
+    String jsonConvert;
+    String xmlConvert;
+
+    public String getCsvConert() {
+        return csvConvert;
+    }
+
+    public void setCsvConert(String csvConert) {
+        this.csvConvert = csvConert;
+    }
+
+    public String getJsonConvert() {
+        return jsonConvert;
+    }
+
+    public void setJsonConvert(String jsonConvert) {
+        this.jsonConvert = jsonConvert;
+    }
+
+    public String getXmlConvert() {
+        return xmlConvert;
+    }
+
+    public void setXmlConvert(String xmlConvert) {
+        this.xmlConvert = xmlConvert;
+    }
+}
