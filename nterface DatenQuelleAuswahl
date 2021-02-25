@@ -1,0 +1,6 @@
+package architekturProjekt;
+
+public interface DatenQuelleAuswahl {
+
+    public String datenAuswahl();
+}
