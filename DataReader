@@ -1,0 +1,16 @@
+package architekturProjekt;
+
+public class DataReader implements DatenQuelleAuswahl {
+
+    @Override
+    public String datenAuswahl() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.datenQuelle1.matches("hier steh ein regulärer ausdruck ");
+        if(fileChooser.datenQuelle3.contains("</")==true){
+            CSVDataPool csvDataPool = new CSVDataPool();
+            csvDataPool.setEmpfangeDaten(" verrändere die empfangene CSV Datei");
+        }
+
+        return null;
+    }
+}
