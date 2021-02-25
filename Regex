@@ -1,0 +1,24 @@
+package architekturProjekt;
+
+import java.util.regex.Pattern;
+
+public class Regex {
+
+    DatenQuelle datenQuelle = new DatenQuelle();
+
+    public void gebeRegex(){
+
+        System.out.println("Pattern : ");
+        System.out.println(Pattern.matches("'.*'", "'Am Anfang war das Zeichen'"));
+    }
+
+    public void gebeRegexAus(){
+
+
+        System.out.println(
+                datenQuelle.xmltext2.replaceAll("<[^>]+>", " ")
+        );
+
+    }
+
+}
