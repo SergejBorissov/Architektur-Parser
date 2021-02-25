@@ -1,0 +1,32 @@
+package architekturProjekt;
+
+public class DarstellungLaufZeit {
+
+    long laufZeitStart = System.nanoTime();
+    long laufZeitEnde = System.nanoTime();
+    long summeLaufZeit = laufZeitEnde - laufZeitStart;
+
+    public long getLaufZeitStart() {
+        return laufZeitStart;
+    }
+
+    public void setLaufZeitStart(long laufZeitStart) {
+        this.laufZeitStart = laufZeitStart;
+    }
+
+    public long getLaufZeitEnde() {
+        return laufZeitEnde;
+    }
+
+    public void setLaufZeitEnde(long laufZeitEnde) {
+        this.laufZeitEnde = laufZeitEnde;
+    }
+
+    public long getSummeLaufZeit() {
+        return summeLaufZeit;
+    }
+
+    public void setSummeLaufZeit(long summeLaufZeit) {
+        this.summeLaufZeit = summeLaufZeit;
+    }
+}
