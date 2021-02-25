@@ -1,0 +1,28 @@
+package architekturProjekt;
+
+
+import java.io.File;
+
+public class FileAuflistung {
+
+    DatenQuelle datenQuelle = new DatenQuelle();
+
+    public void gebeAlleFilesAus(){
+
+        try {
+
+            File[] files = datenQuelle.schreibtischfile.listFiles();
+
+            System.out.println("Files are:");
+            System.out.println("-----------------");
+
+            for (int i = 0; i < files.length; i++) {
+                System.out.println(files[i].getName());
+            }
+        }  catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+
+    }
+
+}
