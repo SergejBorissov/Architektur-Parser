@@ -2,10 +2,12 @@ package architekturProjekt;
 
 
 import java.io.File;
+import java.io.FilenameFilter;
 
 public class FileAuflistung {
 
     DatenQuelle datenQuelle = new DatenQuelle();
+    int anzahlCSVFormate;
 
     public void gebeAlleFilesAus(){
 
@@ -23,6 +25,30 @@ public class FileAuflistung {
             System.err.println(e.getMessage());
         }
 
+    }
+
+    public void gebeAnzahlFormate(){
+
+
+
+               if(datenQuelle.schreibtischfile.getName().endsWith("csv") == true){
+                    anzahlCSVFormate++;
+                }
+        System.out.println(anzahlCSVFormate);
+
+
+    }
+
+    public void gebeAlleCSVDaten(){
+        File[] files = datenQuelle.schreibtischfile.listFiles(new FilenameFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith("csv");
+            }
+        });
+        for(File f : files){
+            System.out.println(f.getName());
+        }
     }
 
 }
