@@ -34,7 +34,7 @@ public class BubbleView extends Application {
         XYChart.Data<Number, Number> data2 = new XYChart.Data<>(1,1,fileAuflistung.gebeJsonAus());
 
         series1.getData().addAll(data1, data2);
-        series1.setName("Borissov");
+        series1.setName("Anzahl CSV: " + fileAuflistung.gebeAlleCSVDaten() + "Anzahl JSON: " + fileAuflistung.gebeJsonAus());
         bubbleChart.getData().add(series1);
 
 
