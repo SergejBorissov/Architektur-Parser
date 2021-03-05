@@ -10,6 +10,7 @@ public class FileAuflistung {
     FormatCounter formatCounter = new FormatCounter();
     int anzahlCSVFormate;
     int anzahljsonFormate;
+    int anzahlXmlFormate;
     long fileGroeße;
 
     public void gebeAlleFilesAus(){
@@ -91,6 +92,32 @@ public class FileAuflistung {
 
         System.out.println("Anzahl JSON: " + anzahljsonFormate);
         return anzahljsonFormate;
+    }
+
+    public int gebeXmlAus(){
+
+        File[] files = datenQuelle.schreibtischfile.listFiles(new FilenameFilter() {
+
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith("xml");
+            }
+
+        });
+        for(File f : files){
+            System.out.println(f.getName());
+            //Dateigröße
+            System.out.println("Dateigröße: " + f.length());
+
+
+            if(f.getName().endsWith("xml")){
+                anzahlXmlFormate++;
+            }
+
+        }
+
+        System.out.println("Anzahl XML: " + anzahlXmlFormate);
+        return anzahlXmlFormate;
     }
 
 
