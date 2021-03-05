@@ -120,5 +120,80 @@ public class FileAuflistung {
         return anzahlXmlFormate;
     }
 
+    public double gebeDateiVolumenCSV(){
+
+        File[] files = datenQuelle.schreibtischfile.listFiles(new FilenameFilter() {
+
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith("csv");
+            }
+
+        });
+
+        for(File f : files){
+            System.out.println(f.getName());
+            //Dateigröße
+            System.out.println("Dateivolumen CSV: " + f.length());
+
+
+            if(f.getName().endsWith("csv")){
+                anzahlXmlFormate++;
+            }
+
+        }
+        return files.length;
+    }
+
+    public double gebeDateiVolumenJSON(){
+
+        File[] files = datenQuelle.schreibtischfile.listFiles(new FilenameFilter() {
+
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith("json");
+            }
+
+        });
+
+        for(File f : files){
+            System.out.println(f.getName());
+            //Dateigröße
+            System.out.println("Dateivolumen Json: " + f.length());
+
+
+            if(f.getName().endsWith("json")){
+                anzahljsonFormate++;
+            }
+
+        }
+        return files.length;
+    }
+
+    public double gebeDateiVolumenXML(){
+
+        File[] files = datenQuelle.schreibtischfile.listFiles(new FilenameFilter() {
+
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith("xml");
+            }
+
+        });
+
+        for(File f : files){
+            System.out.println(f.getName());
+            //Dateigröße
+            System.out.println("Dateivolumen XML: " + f.length());
+
+
+            if(f.getName().endsWith("xml")){
+                anzahlXmlFormate++;
+            }
+
+        }
+        return files.length;
+    }
+
 
 }
