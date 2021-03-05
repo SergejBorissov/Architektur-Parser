@@ -9,6 +9,7 @@ public class FileAuflistung {
     DatenQuelle datenQuelle = new DatenQuelle();
     FormatCounter formatCounter = new FormatCounter();
     int anzahlCSVFormate;
+    int anzahljsonFormate;
     long fileGroeße;
 
     public void gebeAlleFilesAus(){
@@ -63,9 +64,34 @@ public class FileAuflistung {
 
         }
 
-        System.out.println("Anzahl: " + anzahlCSVFormate);
+        System.out.println("Anzahl CSV Daten: " + anzahlCSVFormate);
         return anzahlCSVFormate;
     }
-    
+    public int gebeJsonAus(){
+
+        File[] files = datenQuelle.schreibtischfile.listFiles(new FilenameFilter() {
+
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith("json");
+            }
+
+        });
+        for(File f : files){
+            System.out.println(f.getName());
+            //Dateigröße
+            System.out.println("Dateigröße: " + f.length());
+
+
+            if(f.getName().endsWith("json")){
+                anzahljsonFormate++;
+            }
+
+        }
+
+        System.out.println("Anzahl JSON: " + anzahljsonFormate);
+        return anzahljsonFormate;
+    }
+
 
 }
