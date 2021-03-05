@@ -30,11 +30,11 @@ public class BubbleView extends Application {
         BubbleChart<Number, Number> bubbleChart = new BubbleChart<Number, Number>(xAxis, yAxis);
         XYChart.Series<Number, Number> series1 = new XYChart.Series<Number, Number>();
 
-        XYChart.Data<Number, Number> data1 = new XYChart.Data<Number, Number>(1, 1, fileAuflistung.gebeAlleCSVDaten());
-        XYChart.Data<Number, Number> data2 = new XYChart.Data<>(1,1,fileAuflistung.gebeJsonAus());
-        XYChart.Data<Number, Number> data3 = new XYChart.Data<>(1,1,fileAuflistung.gebeXmlAus());
+        XYChart.Data<Number, Number> dataCSV = new XYChart.Data<Number, Number>(fileAuflistung.gebeDateiVolumenCSV(), 1, fileAuflistung.gebeAlleCSVDaten());
+        XYChart.Data<Number, Number> dataJSON = new XYChart.Data<>(fileAuflistung.gebeDateiVolumenJSON(), 1,fileAuflistung.gebeJsonAus());
+        XYChart.Data<Number, Number> dataXML = new XYChart.Data<>(fileAuflistung.gebeDateiVolumenXML(),1,fileAuflistung.gebeXmlAus());
 
-        series1.getData().addAll(data1, data2, data3);
+        series1.getData().addAll(dataCSV, dataJSON, dataXML);
         series1.setName("Anzahl CSV: " + fileAuflistung.gebeAlleCSVDaten() +
                                 "  Anzahl JSON: " + fileAuflistung.gebeJsonAus() + " Anzahl XML:  " + fileAuflistung.anzahlXmlFormate);
         bubbleChart.getData().add(series1);
