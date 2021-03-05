@@ -7,6 +7,7 @@ import java.io.FilenameFilter;
 public class FileAuflistung {
 
     DatenQuelle datenQuelle = new DatenQuelle();
+    FormatCounter formatCounter = new FormatCounter();
     int anzahlCSVFormate;
 
     public void gebeAlleFilesAus(){
@@ -40,6 +41,7 @@ public class FileAuflistung {
     }
 
     public void gebeAlleCSVDaten(){
+
         File[] files = datenQuelle.schreibtischfile.listFiles(new FilenameFilter() {
             @Override
             public boolean accept(File dir, String name) {
@@ -48,6 +50,13 @@ public class FileAuflistung {
         });
         for(File f : files){
             System.out.println(f.getName());
+            //Dateigröße
+            System.out.println("Dateigröße: " + f.length());
+            if(datenQuelle.schreibtischfile.getName().endsWith("csv")){
+                anzahlCSVFormate++;
+            }
+            System.out.println("Anzahl: " + anzahlCSVFormate);
+
         }
     }
 
