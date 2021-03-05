@@ -32,9 +32,11 @@ public class BubbleView extends Application {
 
         XYChart.Data<Number, Number> data1 = new XYChart.Data<Number, Number>(1, 1, fileAuflistung.gebeAlleCSVDaten());
         XYChart.Data<Number, Number> data2 = new XYChart.Data<>(1,1,fileAuflistung.gebeJsonAus());
+        XYChart.Data<Number, Number> data3 = new XYChart.Data<>(1,1,fileAuflistung.gebeXmlAus());
 
-        series1.getData().addAll(data1, data2);
-        series1.setName("Anzahl CSV: " + fileAuflistung.gebeAlleCSVDaten() + "  Anzahl JSON: " + fileAuflistung.gebeJsonAus());
+        series1.getData().addAll(data1, data2, data3);
+        series1.setName("Anzahl CSV: " + fileAuflistung.gebeAlleCSVDaten() +
+                                "  Anzahl JSON: " + fileAuflistung.gebeJsonAus() + " Anzahl XML:  " + fileAuflistung.anzahlXmlFormate);
         bubbleChart.getData().add(series1);
 
 
