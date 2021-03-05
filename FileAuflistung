@@ -9,6 +9,7 @@ public class FileAuflistung {
     DatenQuelle datenQuelle = new DatenQuelle();
     FormatCounter formatCounter = new FormatCounter();
     int anzahlCSVFormate;
+    long fileGroeße;
 
     public void gebeAlleFilesAus(){
 
@@ -40,7 +41,7 @@ public class FileAuflistung {
 
     }
 
-    public void gebeAlleCSVDaten(){
+    public int gebeAlleCSVDaten(){
 
         File[] files = datenQuelle.schreibtischfile.listFiles(new FilenameFilter() {
 
@@ -54,6 +55,8 @@ public class FileAuflistung {
             System.out.println(f.getName());
             //Dateigröße
             System.out.println("Dateigröße: " + f.length());
+
+
             if(f.getName().endsWith("csv")){
                 anzahlCSVFormate++;
             }
@@ -61,6 +64,8 @@ public class FileAuflistung {
         }
 
         System.out.println("Anzahl: " + anzahlCSVFormate);
+        return anzahlCSVFormate;
     }
+    
 
 }
