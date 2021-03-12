@@ -1,0 +1,41 @@
+package architekturProjekt;
+
+public class FormatCounter {
+
+    int anzahlCsv;
+    int anzahlJson;
+    int anzahlXML;
+    int anzahlUnbekannt;
+
+    public int getAnzahlXML(){
+        return anzahlXML;
+    }
+
+    public void setAnzahlXML(int anzahlXML) {
+        this.anzahlXML = anzahlXML;
+    }
+
+    public int getAnzahlCsv() {
+        return anzahlCsv;
+    }
+
+    public void setAnzahlCsv(int anzahlCsv) {
+        this.anzahlCsv = anzahlCsv;
+    }
+
+    public int getAnzahlJson() {
+        return anzahlJson;
+    }
+
+    public void setAnzahlJson(int anzahlJson) {
+        this.anzahlJson = anzahlJson;
+    }
+
+    public int getAnzahlUnbekannt() {
+        return anzahlUnbekannt;
+    }
+
+    public void setAnzahlUnbekannt(int anzahlUnbekannt) {
+        this.anzahlUnbekannt = anzahlUnbekannt;
+    }
+}
